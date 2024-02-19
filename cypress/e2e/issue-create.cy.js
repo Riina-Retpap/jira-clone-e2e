@@ -90,7 +90,7 @@ describe("Issue create", () => {
     });
   });
 
-  it("Creating a custom issue", () => {
+  it("Should create a custom issue and validate it", () => {
     cy.get('[data-testid="modal:issue-create"]').within(() => {
       cy.get(".ql-editor").type("My_bug_description");
       cy.get('input[name="title"]').type("Bug1");
@@ -116,7 +116,7 @@ describe("Issue create", () => {
       .and("have.length", "1");
   });
 
-  it("Creating a random data plugin issue", () => {
+  it("Should create a random data plugin issue and validate it", () => {
     cy.get('[data-testid="modal:issue-create"]').within(() => {
       cy.get(".ql-editor").type(randomWordsPlural);
       cy.get('input[name="title"]').type(randomWordSingle);
