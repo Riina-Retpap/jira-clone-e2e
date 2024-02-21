@@ -21,7 +21,7 @@ describe("Issue deleting", () => {
     cy.contains("This is an issue of type: Task.").should("not.exist");
   });
 
-  it("should cancel deleting issue and confirm", () => {
+  it("should CANCEL deleting issue and confirm", () => {
     cy.get('[data-testid="icon:trash"]').click();
     cy.get('[data-testid="modal:confirm"]').should("be.visible");
     //clicking "Cancel"
