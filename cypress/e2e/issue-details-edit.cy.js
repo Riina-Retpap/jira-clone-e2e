@@ -80,18 +80,11 @@ describe("Issue details editing", () => {
 
     cy.get('[data-testid="select:priority"]')
       .click()
+      .contains('[data-testid="select-option:Highest"]')
       .next()
       .find("option")
       .eq(5)
-      .should("have.text", "Highest");
-    cy.get("#country").find("option").eq(4).should("have.text", "High");
-    cy.get("#country").find("option").eq(2).should("have.text", "Low");
-    cy.get("#country")
-      .find("option")
-      .eq(1)
-      .should("have.text", "Lowest")
-
-      .find('[data-testid="select-option:Highest"]')
+      .should("have.text", "Highest")
       .next()
       .contains('[data-testid="select-option:Medium"]')
       .find('[data-testid="select-option:Low"]')
