@@ -87,5 +87,13 @@ describe("Issue details editing", () => {
         '[data-testid="select-option:Low"]',
         '[data-testid="select-option:Lowest"]'
       );
+
+    for (let i = 0; i < elements.length; i++) {
+      // Step 1: Invoke the text value from the current element
+      const textValue = elements[i].textContent;
+
+      // Step 2: Save it into your predefined array
+      myArray.push(textValue);
+    }
   });
 });
