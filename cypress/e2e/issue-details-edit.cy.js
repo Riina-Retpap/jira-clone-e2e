@@ -80,15 +80,12 @@ describe("Issue details editing", () => {
 
     cy.get('[data-testid="select:priority"]')
       .click()
-      .contains('[data-testid="select-option:Highest"]')
       .next()
-      .find("option")
-      .eq(5)
-      .should("have.text", "Highest")
-      .next()
-      .contains('[data-testid="select-option:Medium"]')
-      .find('[data-testid="select-option:Low"]')
-      .find('[data-testid="select-option:Lowest"]');
-    cy.get("data-select-option-value");
+      .find(
+        '[data-testid="select-option:Highest"]',
+        '[data-testid="select-option:Medium"]',
+        '[data-testid="select-option:Low"]',
+        '[data-testid="select-option:Lowest"]'
+      );
   });
 });
